@@ -1,6 +1,6 @@
 {
   "name": "zeit-now-mux-builder",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "umd:main": "dist/zeit-now-mux-builder.umd.production.js",
   "module": "dist/zeit-now-mux-builder.es.production.js",
