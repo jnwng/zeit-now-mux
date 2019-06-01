@@ -1,8 +1,8 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.html", "use": "zeit-now-mux-builder" },
-    { "src": "subdirectory/index.html", "use": "zeit-now-mux-builder" }
+    { "src": "index.html", "use": "zeit-now-mux-builder@latest" },
+    { "src": "subdirectory/index.html", "use": "zeit-now-mux-builder@latest" }
   ],
   "probes": [
     { "path": "/", "mustContain": "stream.mux.com" },
