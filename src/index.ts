@@ -22,7 +22,6 @@ export async function build(options: BuildOptions) {
   // Let's pull this out into an extensible set of tests for certain properties
   const $ = cheerio.load(content);
   const videoSource = $('video source');
-  console.info({ videoSource });
   //
 
   const asset = await Video.Assets.create({
