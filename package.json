@@ -1,9 +1,9 @@
 {
-  "name": "zeit-now-mux",
+  "name": "zeit-now-mux-builder",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "umd:main": "dist/zeit-now-mux.umd.production.js",
-  "module": "dist/zeit-now-mux.es.production.js",
+  "umd:main": "dist/zeit-now-mux-builder.umd.production.js",
+  "module": "dist/zeit-now-mux-builder.es.production.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
@@ -13,7 +13,9 @@
     "build": "tsdx build",
     "test": "tsdx test"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@now/build-utils": "^0.5.5"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
@@ -26,6 +28,7 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
+    "@now/build-utils": "^0.5.5",
     "@types/jest": "^24.0.13",
     "husky": "^2.3.0",
     "prettier": "^1.17.1",
@@ -33,5 +36,9 @@
     "tsdx": "^0.6.1",
     "tslib": "^1.9.3",
     "typescript": "^3.5.1"
+  },
+  "dependencies": {
+    "@mux/mux-node": "^2.2.0",
+    "cheerio": "^1.0.0-rc.3"
   }
 }

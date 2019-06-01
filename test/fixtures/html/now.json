@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@now/optipng" },
+    { "src": "subdirectory/index.html", "use": "@now/optipng" }
+  ],
+  "probes": [
+    { "path": "/", "mustContain": "showcase.png" },
+    { "path": "/", "mustContain": "subdirectory" }
+  ],
+  "build": {
+    "env": {
+      "MUX_ACCESS_TOKEN": "@mux_access_token",
+      "MUX_SECRET_KEY": "@mux_secret_key"
+    }
+  }
+}
