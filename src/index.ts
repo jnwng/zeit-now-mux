@@ -25,7 +25,7 @@ export async function build(options: BuildOptions) {
   //
 
   const asset = await Video.Assets.create({
-    input: videoSource,
+    input: videoSource.attr('src'),
   });
   console.info({ asset });
 
