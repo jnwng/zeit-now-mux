@@ -5,8 +5,8 @@
     { "src": "subdirectory/index.html", "use": "zeit-now-mux-builder" }
   ],
   "probes": [
-    { "path": "/", "mustContain": "showcase.png" },
-    { "path": "/", "mustContain": "subdirectory" }
+    { "path": "/", "mustContain": "stream.mux.com" },
+    { "path": "/subdirectory/index.html", "mustContain": "stream.mux.com" }
   ],
   "build": {
     "env": {

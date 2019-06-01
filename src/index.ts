@@ -36,7 +36,11 @@ export async function build(options: BuildOptions) {
 
   const playbackURL = `https://stream.mux.com/${playback.id}.m3u8`;
   videoSource.attr('src', playbackURL);
-  console.info({ src: videoSource.attr('src') });
+  videoSource.attr('type', 'application/x-mpegURL');
+  console.info({
+    src: videoSource.attr('src'),
+    type: videoSource.attr('type'),
+  });
 
   // if we match the video tag, do an async substitution for the Mux URL
   // perhaps we can do a video literal tag.
