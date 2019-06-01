@@ -11,6 +11,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
+    "deploy": "npm build && npm version minor && npm publish",
     "test": "tsdx test"
   },
   "peerDependencies": {

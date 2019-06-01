@@ -1,8 +1,8 @@
 {
   "version": 2,
   "builds": [
-    { "src": "index.html", "use": "@now/optipng" },
-    { "src": "subdirectory/index.html", "use": "@now/optipng" }
+    { "src": "index.html", "use": "zeit-now-mux-builder" },
+    { "src": "subdirectory/index.html", "use": "zeit-now-mux-builder" }
   ],
   "probes": [
     { "path": "/", "mustContain": "showcase.png" },
