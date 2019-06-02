@@ -13,14 +13,13 @@
       "src": "/redirect",
       "dest": "/src/redirect.ts"
     },
-    { "src": "/", "dest": "/src/index.ts" },
-    {}
+    { "src": "/", "dest": "/src/index.ts" }
   ],
 
   "build": {
     "env": {
-      "ZEIT_OAUTH_CLIENT_ID": "@ZEIT_OAUTH_CLIENT_ID",
-      "ZEIT_OAUTH_CLIENT_SECRET": "@ZEIT_OAUTH_CLIENT_SECRET"
+      "ZEIT_OAUTH_CLIENT_ID": "@zeit_oauth_client_id",
+      "ZEIT_OAUTH_CLIENT_SECRET": "@zeit_oauth_client_secret"
     }
   }
 }

@@ -1,11 +1,14 @@
 const { parse } = require('url');
 const superagent = require('superagent');
 
+const client_id = 'oac_pEpduOmaJgUcbtidS88J6oeL';
+const client_secret = 'sDVRJbdZDqJA2Y1rVxCE1V5R';
+
 async function getAccessToken({ code }: { code: string }) {
-  const {
-    ZEIT_OAUTH_CLIENT_ID: client_id,
-    ZEIT_OAUTH_CLIENT_SECRET: client_secret,
-  } = process.env;
+  // const {
+  //   ZEIT_OAUTH_CLIENT_ID: client_id,
+  //   ZEIT_OAUTH_CLIENT_SECRET: client_secret,
+  // } = process.env;
   try {
     const response = await superagent
       .post('https://api.zeit.co/v2/oauth/access_token')

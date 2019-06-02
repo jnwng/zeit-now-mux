@@ -25,9 +25,11 @@ async function getAssetMap() {
       });
     console.info({ response });
 
-    return response.muxAssets;
+    return response.muxAssets || {};
   } catch (err) {
     console.error({ err });
+
+    return {};
   }
 }
 
@@ -76,11 +78,13 @@ export async function build(options: BuildOptions) {
   const $ = cheerio.load(content);
   const videoSources = $('video source');
 
-  const assetMap = getAssetMap();
+  const assetMap = await getAssetMap();
   console.info({ assetMap });
 
   let newAssetMap = {};
-  videoSources.map(async videoSource => {
+  // @ts-ignore
+  videoSources.map(async (index, element) => {
+    const videoSource = $(element);
     const sourceURL = videoSource.attr('src');
 
     let playbackId = assetMap[sourceURL].playbackId;
