@@ -11,7 +11,9 @@
   "build": {
     "env": {
       "MUX_ACCESS_TOKEN": "@mux_access_token",
-      "MUX_SECRET_KEY": "@mux_secret_key"
+      "MUX_SECRET_KEY": "@mux_secret_key",
+      "ZEIT_CONFIGURATION_ID": "@zeit-now-mux-configuration-id",
+      "ZEIT_CONFIGURATION_ACCESS_TOKEN": "@zeit-now-mux-access-token"
     }
   }
 }

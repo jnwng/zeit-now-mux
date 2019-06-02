@@ -1,0 +1,26 @@
+{
+  "name": "zeit-now-mux-integration",
+  "version": 2,
+  "builds": [
+    { "src": "src/index.ts", "use": "@now/node" },
+    {
+      "src": "src/redirect.ts",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/redirect",
+      "dest": "/src/redirect.ts"
+    },
+    { "src": "/", "dest": "/src/index.ts" },
+    {}
+  ],
+
+  "build": {
+    "env": {
+      "ZEIT_OAUTH_CLIENT_ID": "@ZEIT_OAUTH_CLIENT_ID",
+      "ZEIT_OAUTH_CLIENT_SECRET": "@ZEIT_OAUTH_CLIENT_SECRET"
+    }
+  }
+}
