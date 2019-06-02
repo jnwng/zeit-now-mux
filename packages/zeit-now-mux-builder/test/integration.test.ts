@@ -6,7 +6,7 @@ import path from 'path';
 import {
   packAndDeploy,
   testDeployment,
-} from '../../now-builders/test/lib/deployment/test-deployment';
+} from '../../../../now-builders/test/lib/deployment/test-deployment';
 
 jest.setTimeout(4 * 60 * 1000);
 const buildUtilsUrl = '@canary';
